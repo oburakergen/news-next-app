@@ -1,25 +1,52 @@
 {
-  "name": "news-next-app",
+  "name": "news-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "test-and-lint": "tsc --noEmit && eslint ."
   },
   "dependencies": {
-    "@types/node": "20.5.6",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.6",
+    "@mui/material": "^5.14.6",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "20.5.3",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.15",
-    "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "axios": "1.2.1",
     "next": "13.4.19",
-    "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-lodash": "^0.1.2",
+    "sass": "^1.66.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
-  }
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@react-buddy/ide-toolbox-next": "^2.4.1",
+    "@react-buddy/palette-mui": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "postcss": "8.4.28",
+    "prettier": "^3.0.2"
+  },
+  "include": [
+    "typescript/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "node_modules/react-hyperscript-helpers/lib/*.ts",
+    "dev/*.ts"
+  ]
 }
