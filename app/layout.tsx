@@ -1,8 +1,9 @@
 import "../styles/sass/globals.scss";
 import type { Metadata } from "next";
-import Header from "@/components/navigation/Header";
 import React from "react";
 import { roboto } from "@/styles/fonts/fonts";
+import { Container } from "@/components/core";
+import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +14,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="tr-TR">
       <body id="__next" className={`${roboto.className}`}>
-        <Header />
-        {children}
+        <Container intent="fluid">
+          <div className="tw-flex tw-flex-col tw-min-h-screen">
+            <Header />
+            {children}
+          </div>
+        </Container>
       </body>
     </html>
   );

@@ -1,31 +1,58 @@
 import axios, { type AxiosError, type AxiosInstance, type AxiosRequestConfig, type AxiosResponse } from "axios";
+import axiosRetry from "axios-retry";
 
-const axiosInstance: AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+class AxiosService {
+  private axiosInstance: AxiosInstance;
 
-axiosInstance.interceptors.request.use(
-  (config: AxiosRequestConfig): AxiosRequestConfig => {
-    const token: string | null = localStorage.getItem("token");
+  constructor() {
+    this.axiosInstance = axios.create({
+      baseURL: process.env.NEXT_PUBLIC_API_URL,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-    if (token) {
-      config.headers = {
-        ...config.headers,
-        Authorization: `Bearer ${token}`,
-      };
-    }
-    return config;
-  },
-  (error: AxiosError): Promise<AxiosError> => {
-    return Promise.reject(error);
+    this.setupAxiosRetry();
+    this.setupRequestInterceptor();
+    this.setupResponseInterceptor();
   }
-);
 
-axiosInstance.interceptors.response.use((response: AxiosResponse): AxiosResponse => {
-  return response;
-});
+  private setupAxiosRetry() {
+    axiosRetry(axios, {
+      retries: 3,
+      retryDelay: (retryCount) => {
+        return retryCount * 5000;
+      },
+      retryCondition: (error: AxiosError) => {
+        return error.response?.status === 500;
+      },
+    });
+  }
 
-export default axiosInstance;
+  private setupRequestInterceptor() {
+    this.axiosInstance.interceptors.request.use(
+      (config: AxiosRequestConfig): AxiosRequestConfig => {
+        const token: string | null = localStorage.getItem("token");
+
+        if (token) {
+          config.headers = {
+            ...config.headers,
+            Authorization: `Bearer ${token}`,
+          };
+        }
+        return config;
+      },
+      (error: AxiosError): Promise<AxiosError> => {
+        return Promise.reject(error);
+      }
+    );
+  }
+
+  private setupResponseInterceptor() {
+    this.axiosInstance.interceptors.response.use((response: AxiosResponse): AxiosResponse => {
+      return response;
+    });
+  }
+}
+
+export default AxiosService;
