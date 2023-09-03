@@ -4,9 +4,29 @@
 @import "variable";
 
 html,
-body {
+body,
+button,
+input,
+select,
+textarea,
+div {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   background: $fadedWhite100;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
 }
