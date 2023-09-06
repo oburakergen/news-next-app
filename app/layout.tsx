@@ -15,10 +15,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="tr-TR">
       <body id="__next" className={`${roboto.className}`}>
         <Container intent="fluid">
-          <div className="tw-flex tw-flex-col tw-min-h-screen">
-            <Header />
-            {children}
-          </div>
+          <Header />
+          {children}
         </Container>
       </body>
     </html>

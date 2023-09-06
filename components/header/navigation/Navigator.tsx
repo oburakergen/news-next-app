@@ -2,23 +2,48 @@
 import Link from "next/link";
 const data = [
   {
-    title: "Home",
+    title: "News",
     id: 1,
     link: "/",
   },
   {
-    title: "About",
+    title: "Sports",
     id: 2,
     link: "/about",
   },
   {
-    title: "Contact",
+    title: "Play",
     id: 3,
     link: "/contact",
   },
   {
-    title: "Blog",
+    title: "Money",
     id: 4,
+    link: "/blog",
+  },
+  {
+    title: "Entertainment",
+    id: 5,
+    link: "/blog",
+  },
+  {
+    title: "Tech",
+    id: 6,
+    link: "/blog",
+  },
+  {
+    title: "Travel",
+    id: 7,
+    link: "/blog",
+  },
+  {
+    title: "Style",
+    id: 8,
+    link: "/blog",
+  },
+  {
+    title: "Features",
+    id: 9,
     link: "/blog",
   },
 ];

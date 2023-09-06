@@ -5,6 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 const container = cva(["tw-relative", "tw-container"], {
   variants: {
     intent: {
+      none: [],
       fluid: ["max-w-screen"],
       flex: ["tw-flex", "tw-items-center", "tw-flex-wrap"],
     },
