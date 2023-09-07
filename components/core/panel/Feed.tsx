@@ -7,10 +7,11 @@ const feed = cva([
   "tw-grid-flow-row",
   "tw-auto-rows-max",
   "tw-grid-cols-4",
+  "lg:tw-grid-cols-3",
+  "md:tw-grid-cols-2",
   "sm:tw-grid-cols-1",
   "grid-flow-col",
-  "tw-gap-4",
-  "tw-place-items-start",
+  "tw-gap-6",
   "tw-place-content-center",
 ]);
 

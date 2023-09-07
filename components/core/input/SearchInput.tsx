@@ -17,7 +17,7 @@ const searchInput = cva([
   "tw-p-2",
 ]);
 
-export interface DivProps extends React.InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof searchInput> {}
+interface DivProps extends React.InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof searchInput> {}
 export const SearchInput: React.FC<DivProps> = ({ className, ...props }) => (
   <input className={searchInput({ className })} {...props} />
 );

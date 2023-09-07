@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Container, Feed, FeedItem } from "@/components/core";
+import { Container } from "@/components/core";
+import FeedLayout from "@/components/news/FeedLayout";
 export const metadata: Metadata = {
   title: "Welcome to Next.js",
   description: "...",
@@ -8,13 +9,7 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     <Container intent="flex" justify="center" className="tw-mx-auto">
-      <Feed>
-        <FeedItem intent="1x">1</FeedItem>
-        <FeedItem intent="1x">1</FeedItem>
-        <FeedItem intent="1x">1</FeedItem>
-        <FeedItem intent="1x">1</FeedItem>
-        <FeedItem intent="1x">1</FeedItem>
-      </Feed>
+      <FeedLayout />
     </Container>
   );
 };
