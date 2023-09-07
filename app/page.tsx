@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Container, Feed, FeedItem } from "@/components/core";
 export const metadata: Metadata = {
   title: "Welcome to Next.js",
   description: "...",
@@ -6,10 +7,15 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div>
-      <h1>Next.js</h1>
-      <p>Next.js is a React framework for production.</p>
-    </div>
+    <Container intent="flex" justify="center" className="tw-mx-auto">
+      <Feed>
+        <FeedItem intent="1x">1</FeedItem>
+        <FeedItem intent="1x">1</FeedItem>
+        <FeedItem intent="1x">1</FeedItem>
+        <FeedItem intent="1x">1</FeedItem>
+        <FeedItem intent="1x">1</FeedItem>
+      </Feed>
+    </Container>
   );
 };
 
