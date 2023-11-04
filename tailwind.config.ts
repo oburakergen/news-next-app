@@ -28,17 +28,29 @@ const config: Config = {
       pink: colors.pink,
     },
     screens: {
-      "2xl": { max: "1600px" },
-      xl: { max: "1400px" },
-      lg: { max: "1023px" },
-      md: { max: "767px" },
-      sm: { max: "639px" },
       xs: { max: "480px" },
+      sm: { max: "639px" },
+      md: { max: "767px" },
+      lg: { max: "1023px" },
+      xl: { max: "1400px" },
+    },
+    fontFamily: {
+      sans: ["Roboto", "sans-serif"],
+    },
+    fontSize: {
+      xs: "0.75rem",
+      sm: "0.875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+    },
+    fontWeight: {
+      light: "300",
+      normal: "400",
+      medium: "500",
+      bold: "700",
     },
     extend: {
-      fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-      },
       colors: {
         fadedWhite: {
           100: "#f5f5f5",
@@ -59,10 +71,6 @@ const config: Config = {
       },
       screens: {
         xxs: { max: "320px" },
-      },
-      fontSize: {
-        price: "1.5rem",
-        description: "0.875rem",
       },
     },
   },

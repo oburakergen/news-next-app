@@ -13,6 +13,7 @@ const feed = cva([
   "grid-flow-col",
   "tw-gap-6",
   "tw-place-content-center",
+  "justify-items-center",
 ]);
 
 interface DivProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof feed> {}

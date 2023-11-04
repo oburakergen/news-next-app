@@ -17,8 +17,6 @@ const button = cva(
     "tw-text-sm",
     "tw-transition",
     "tw-duration-200",
-    "tw-shadow-fadedWhite-200",
-    "tw-shadow",
   ],
   {
     variants: {
@@ -35,18 +33,23 @@ const button = cva(
         successOutline: ["tw-bg-white", "tw-text-green-500", "tw-border-green-500", "hover:tw-bg-green-50"],
         info: ["tw-bg-blue-500", "tw-text-white", "tw-border-transparent", "hover:rw-bg-blue-600"],
         infoOutline: ["tw-bg-white", "tw-text-blue-500", "tw-border-blue-500", "hover:tw-bg-blue-50"],
-        light: ["tw-bg-transparent", "tw-text-fadedGray-200", "tw-border-gray-400", "hover:tw-bg-gray-200"],
-        dark: ["tw-bg-gray-800", "tw-text-white", "tw-border-transparent", "hover:tw-bg-gray-900"],
-        link: [
+        light: [
           "tw-bg-transparent",
           "tw-text-fadedGray-200",
           "tw-border-transparent",
           "hover:tw-text-fadedWhite-100",
           "hover:tw-bg-fadedGray-200",
+          "tw-shadow-fadedWhite-200",
+          "tw-shadow",
         ],
+        dark: ["tw-bg-gray-800", "tw-text-white", "tw-border-transparent", "hover:tw-bg-gray-900"],
+        link: ["tw-bg-transparent", "tw-text-fadedGray-200", "tw-border-transparent", "tw-bg-transparent"],
       },
       variant: {
         circle: ["tw-rounded-full", "tw-p-2"],
+      },
+      offset: {
+        full: ["tw-ring-sky-700", "tw-ring-offset-sky-700", "tw-ring-offset-2", "tw-ring-2"],
       },
       size: {
         small: ["tw-text-sm", "tw-py-1", "tw-px-2"],

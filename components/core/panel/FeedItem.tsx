@@ -1,14 +1,23 @@
 "use client";
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { FontCard } from "@/components/core/class";
+import { roboto } from "@/styles/fonts/fonts";
 
 const feedItem = cva(
-  ["tw-relative", "transition-all", "tw-rounded-lg", "ring-1", "ring-gray-900/5", ...FontCard, "tw-grid"],
+  [
+    "tw-relative",
+    roboto.className,
+    "transition-all",
+    "tw-rounded-lg",
+    "ring-1",
+    "ring-gray-900/5",
+    "font-card",
+    "tw-grid",
+  ],
   {
     variants: {
       intent: {
-        "1x": ["tw-col-span-1", "tw-row-span-2"],
+        "1x": ["tw-col-span-1", "tw-row-span-1"],
         "2x": ["tw-col-span-2", "sm:tw-col-span-1", "tw-row-span-2"],
       },
     },

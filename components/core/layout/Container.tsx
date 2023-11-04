@@ -2,7 +2,7 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const container = cva(["tw-relative", "tw-container"], {
+const container = cva(["tw-container"], {
   variants: {
     intent: {
       none: [],

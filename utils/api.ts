@@ -53,6 +53,10 @@ class AxiosService {
       return response;
     });
   }
+
+  public apiClient(): AxiosInstance {
+    return this.axiosInstance;
+  }
 }
 
 export default AxiosService;

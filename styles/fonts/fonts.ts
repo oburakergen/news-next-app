@@ -1,7 +1,3 @@
-// import roboto and raleway fonts
-
-// Path: assets\fonts\fonts.ts
-
 import { Roboto, Open_Sans } from "next/font/google";
 import type { NextFontWithVariable } from "next/dist/compiled/@next/font";
 

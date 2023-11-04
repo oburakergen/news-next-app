@@ -10,7 +10,7 @@ const Search = () => {
           <RiSearchLine className="tw-w-6 tw-h-6 tw-fill-fadedGray-200 tw-px-4" />
         </div>
         <SearchInput
-          type="text"
+          type="search"
           placeholder="Ara..."
           maxLength={50}
           autoFocus={false}
@@ -19,7 +19,7 @@ const Search = () => {
           aria-label="Site içinde arama yap"
         />
         <div className="tw-inline-flex tw-bg-transparent tw-my-auto">
-          <Button variant="circle" intent="light" className="tw-shadow-none">
+          <Button variant="circle" intent="link" size="medium">
             <RiSendPlane2Line className="tw-w-6 tw-h-6" />
           </Button>
         </div>
