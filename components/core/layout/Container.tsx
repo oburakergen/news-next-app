@@ -7,7 +7,12 @@ const container = cva(["tw-container"], {
     intent: {
       none: [],
       fluid: ["max-w-screen"],
-      flex: ["tw-flex", "tw-items-center", "tw-flex-wrap"],
+      flex: ["tw-flex", "tw-items-center"],
+    },
+    wrap: {
+      none: [],
+      wrap: ["tw-flex-wrap"],
+      nowrap: ["tw-flex-nowrap"],
     },
     direction: {
       row: ["tw-flex-row"],
@@ -29,10 +34,11 @@ const container = cva(["tw-container"], {
       small2: ["sm:tw-order-last", "xs:tw-order-last"],
     },
   },
-  compoundVariants: [{ intent: "fluid", order: "none" }],
+  compoundVariants: [{ intent: "fluid", order: "first" }],
   defaultVariants: {
     intent: "fluid",
     order: "none",
+    wrap: "none",
   },
 });
 

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { roboto } from "@/styles/fonts/fonts";
 
 const button = cva(
   [
@@ -17,6 +18,7 @@ const button = cva(
     "tw-text-sm",
     "tw-transition",
     "tw-duration-200",
+    roboto.className,
   ],
   {
     variants: {
