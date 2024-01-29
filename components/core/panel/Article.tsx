@@ -1,17 +1,10 @@
 "use client";
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import styled from "styled-components";
 import { roboto } from "@/styles/fonts/fonts";
 
-const ArticleDiv = styled.article`
-  height: 300px;
-  max-width: 300px;
-  width: 100%;
-`;
-
 const article = cva(
-  ["tw-relative", roboto.className, "tw-rounded-lg", "tw-ring-1", "tw-ring-gray-900/5", "font-card", "tw-grid"],
+  ["tw-relative", ...roboto.className, "tw-rounded-lg", "tw-ring-1", "tw-ring-gray-900/5", "font-card", "tw-grid"],
   {
     variants: {
       intent: {
@@ -35,5 +28,5 @@ const article = cva(
 interface DivProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof article> {}
 
 export const Article: React.FC<DivProps> = ({ className, intent, colors, ...props }) => (
-  <ArticleDiv lang="tr" className={article({ intent, colors, className })} {...props} />
+  <div lang="tr" className={article({ intent, colors, className })} {...props} />
 );

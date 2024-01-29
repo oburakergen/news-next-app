@@ -9,6 +9,9 @@ $fadedBlack200: #292929;
 $fadedBlack300: #1f1f1f;
 $fadedBlack400: #141414;
 
+$gutter-x: 1.5rem;
+$gutter-y: 0;
+
 
 .font-card {
   @apply tw-text-base tw-not-italic tw-font-normal tw-tracking-normal tw-leading-4 tw-text-start tw-whitespace-normal tw-break-words tw-hyphens-auto;

@@ -3,36 +3,71 @@
 @tailwind utilities;
 @import "variable";
 
+html, body {
+    @apply tw-antialiased tw-leading-normal tw-font-sans;
+}
+
 html,
 body,
 button,
 input,
 select,
 textarea,
+figure,
 div {
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  border: 0;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  @apply tw-scroll-smooth tw-m-0 tw-p-0 tw-bg-white tw-border-0 tw-box-border tw-no-underline tw-list-none tw-outline-0 tw-font-sans;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
   &:hover {
-    text-decoration: none;
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
   }
   &:focus {
-    text-decoration: none;
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
   }
   &:visited {
-    text-decoration: none;
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
   }
+}
+
+#__next {
+  @apply tw-flex tw-flex-col tw-min-h-screen tw-overflow-x-hidden;
+}
+
+
+.container {
+    @apply tw-relative tw-w-full tw-mx-auto;
+    padding-right: calc($gutter-x * .5);
+    padding-left: calc($gutter-x * .5);
+
+    @screen xs {
+      max-width: 480px;
+      padding-right: calc($gutter-x * 1);
+      padding-left: calc($gutter-x * 1);
+    }
+
+    @screen sm {
+      max-width: 640px;
+      padding-right: calc($gutter-x * 1);
+      padding-left: calc($gutter-x * 1);
+    }
+
+    @screen md {
+      max-width: 768px;
+      padding-right: calc($gutter-x * 1.5);
+      padding-left: calc($gutter-x * 1.5);
+    }
+
+    @screen lg {
+      max-width: 1024px;
+      padding-right: calc($gutter-x * 2);
+      padding-left: calc($gutter-x * 2);
+    }
+
+    @screen xl {
+      max-width: 1280px;
+      padding-right: calc($gutter-x * 2.5);
+      padding-left: calc($gutter-x * 2.5);
+    }
 }

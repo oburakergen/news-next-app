@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FeedLayout = () => {
-  console.log();
   return (
     <Feed className="tw-bg-white">
       <FeedItem>

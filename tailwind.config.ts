@@ -29,9 +29,9 @@ const config: Config = {
     },
     screens: {
       xs: { max: "480px" },
-      sm: { max: "639px" },
-      md: { max: "767px" },
-      lg: { max: "1023px" },
+      sm: { max: "640px" },
+      md: { max: "768px" },
+      lg: { max: "1024px" },
       xl: { max: "1400px" },
     },
     fontFamily: {

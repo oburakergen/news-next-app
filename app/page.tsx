@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/core";
-import FeedLayout from "@/components/news/FeedLayout";
 export const metadata: Metadata = {
   title: "Welcome to Next.js",
   description: "...",
 };
 
 const Home = () => {
-  return (
-    <Container intent="flex" justify="center" className="tw-mx-auto">
-      <FeedLayout />
-    </Container>
-  );
+  return <Container>fdsfsdf</Container>;
 };
 
 export default Home;
