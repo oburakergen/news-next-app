@@ -28,11 +28,11 @@ const config: Config = {
       pink: colors.pink,
     },
     screens: {
-      xs: { max: "480px" },
-      sm: { max: "640px" },
-      md: { max: "768px" },
-      lg: { max: "1024px" },
-      xl: { max: "1400px" },
+      xs: { min: "280px", max: "480px" },
+      sm: { min: "481px", max: "640px" },
+      md: { min: "641px", max: "768px" },
+      lg: { min: "769px", max: "1024px" },
+      xl: { min: "1025px", max: "1400px" },
     },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],

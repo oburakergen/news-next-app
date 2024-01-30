@@ -4,40 +4,30 @@ import Logo from "@/components/Logo";
 import Search from "@/components/header/topbar/Search";
 import RightBar from "@/components/header/topbar/RightBar";
 import Navigator from "@/components/header/navigation/Navigator";
+import { useWindowDimensions } from "@/hooks/useWindowDimensions";
 
 const Header = () => {
+  const { width } = useWindowDimensions();
+
   return (
-    <header className="tw-flex tw-flex-col">
+    <header>
       <Container className="fluid">
-        <Flex
-          justify="between"
-          className="tw-items-center tw-py-3 tw-mx-8 md:tw-mx-4 sm:tw-mx-4 xs:tw-mx-2 tw-relative tw-w-full tw-h-full"
-        >
-          <Flex
-            intent="flex"
-            direction="col"
-            justify="center"
-            order="first"
-            className="tw-w-1/4 sm:tw-w-1/2 xs:tw-w-1/2 tw-h-full tw-my-auto sm:tw-mb-2"
-          >
+        <Flex className="tw-py-4 tw-gap-4" justify="center">
+          <Flex direction="col" justify="center" order="first" className="tw-w-full">
             <Logo />
           </Flex>
-          <Flex intent="flex" direction="col" order="small2" className="tw-w-1/2 sm:tw-w-full xs:tw-w-full  tw-h-full ">
-            <Search />
-          </Flex>
-          <Flex
-            intent="flex"
-            justify="end"
-            direction="row"
-            order="small1"
-            className="tw-w-1/4 sm:tw-w-1/2 xs:tw-w-1/2 tw-h-full sm:tw-mb-2 sm:tw-justify-center xs:tw-justify-end"
-          >
+          {width > 768 && (
+            <Flex direction="col" justify="center" order="small2" className="tw-w-full">
+              <Search />
+            </Flex>
+          )}
+          <Flex direction="row" justify="end" order="small1" className="tw-w-full">
             <RightBar />
           </Flex>
         </Flex>
       </Container>
-      <Flex intent="flex">
-        <Flex intent="flex" justify="center" direction="row" className="tw-items-center tw-py-3">
+      <Flex>
+        <Flex justify="center" direction="row" className="tw-items-center tw-py-3">
           <Navigator />
         </Flex>
       </Flex>

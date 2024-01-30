@@ -7,6 +7,9 @@ const nextConfig = {
   images: {
     domains: ["via.placeholder.com"],
   },
+  experimental: {
+    typedRoutes: true,
+  },
   productionBrowserSourceMaps: true,
   webpack(config) {
     // Grab the existing rule that handles SVG imports

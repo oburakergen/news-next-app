@@ -1,5 +1,5 @@
 "use client";
-import { RiUserSharedLine, RiStarLine, RiHeart2Line } from "react-icons/ri";
+import { RiUserSharedLine, RiStarLine, RiHeart2Line, RiSearchLine } from "react-icons/ri";
 import { Button } from "@/components/core";
 
 const RightBar = () => {
@@ -14,6 +14,9 @@ const RightBar = () => {
       </Button>
       <Button variant="circle" intent="light" size="medium" offset="full">
         <RiStarLine className="tw-w-6 tw-h-6" />
+      </Button>
+      <Button className="tw-hidden sm:tw-block xs:tw-block" variant="circle" intent="light" size="medium" offset="full">
+        <RiSearchLine className="tw-w-6 tw-h-6" />
       </Button>
     </div>
   );

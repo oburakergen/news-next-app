@@ -4,11 +4,6 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 const container = cva(["tw-flex"], {
   variants: {
-    intent: {
-      none: [],
-      fluid: ["max-w-screen"],
-      flex: ["tw-flex", "tw-items-center"],
-    },
     wrap: {
       none: [],
       wrap: ["tw-flex-wrap"],
@@ -34,15 +29,13 @@ const container = cva(["tw-flex"], {
       small2: ["sm:tw-order-last", "xs:tw-order-last"],
     },
   },
-  compoundVariants: [{ intent: "fluid", order: "first" }],
   defaultVariants: {
-    intent: "fluid",
     order: "none",
     wrap: "none",
   },
 });
 
 interface DivProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof container> {}
-export const Flex: React.FC<DivProps> = ({ className, intent, order, direction, justify, ...props }) => (
-  <div className={container({ intent, direction, justify, order, className })} {...props} />
+export const Flex: React.FC<DivProps> = ({ className, order, direction, justify, ...props }) => (
+  <div className={container({ direction, justify, order, className })} {...props} />
 );

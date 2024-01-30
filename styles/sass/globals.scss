@@ -3,8 +3,9 @@
 @tailwind utilities;
 @import "variable";
 
-html, body {
-    @apply tw-antialiased tw-leading-normal tw-font-sans;
+html,
+body {
+  @apply tw-antialiased tw-leading-normal tw-font-sans;
 }
 
 html,
@@ -35,39 +36,64 @@ a {
   @apply tw-flex tw-flex-col tw-min-h-screen tw-overflow-x-hidden;
 }
 
-
 .container {
-    @apply tw-relative tw-w-full tw-mx-auto;
-    padding-right: calc($gutter-x * .5);
-    padding-left: calc($gutter-x * .5);
+  @apply tw-relative tw-w-full tw-mx-auto;
+  padding-right: calc($gutter-x * 0.5);
+  padding-left: calc($gutter-x * 0.5);
 
-    @screen xs {
-      max-width: 480px;
-      padding-right: calc($gutter-x * 1);
-      padding-left: calc($gutter-x * 1);
-    }
+  @screen xs {
+    max-width: 480px;
+    padding-right: calc($gutter-x * 1);
+    padding-left: calc($gutter-x * 1);
+  }
 
-    @screen sm {
-      max-width: 640px;
-      padding-right: calc($gutter-x * 1);
-      padding-left: calc($gutter-x * 1);
-    }
+  @screen sm {
+    max-width: 640px;
+    padding-right: calc($gutter-x * 1);
+    padding-left: calc($gutter-x * 1);
+  }
 
-    @screen md {
-      max-width: 768px;
-      padding-right: calc($gutter-x * 1.5);
-      padding-left: calc($gutter-x * 1.5);
-    }
+  @screen md {
+    max-width: 768px;
+    padding-right: calc($gutter-x * 1.5);
+    padding-left: calc($gutter-x * 1.5);
+  }
 
-    @screen lg {
-      max-width: 1024px;
-      padding-right: calc($gutter-x * 2);
-      padding-left: calc($gutter-x * 2);
-    }
+  @screen lg {
+    max-width: 1024px;
+    padding-right: calc($gutter-x * 2);
+    padding-left: calc($gutter-x * 2);
+  }
 
-    @screen xl {
-      max-width: 1280px;
-      padding-right: calc($gutter-x * 2.5);
-      padding-left: calc($gutter-x * 2.5);
-    }
+  @screen xl {
+    max-width: 1280px;
+    padding-right: calc($gutter-x * 2.5);
+    padding-left: calc($gutter-x * 2.5);
+  }
+}
+
+.search-area {
+  width: 800px;
+
+  @screen xs {
+    display: none !important;
+    width: 0;
+  }
+
+  @screen sm {
+    display: none !important;
+    width: 0;
+  }
+
+  @screen md {
+    width: 276px;
+  }
+
+  @screen lg {
+    width: 378px;
+  }
+
+  @screen xl {
+    width: 600px;
+  }
 }
