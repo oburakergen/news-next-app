@@ -4,7 +4,7 @@ import { SearchInput, Button, Flex } from "@/components/core";
 
 const Search = () => {
   return (
-    <Flex className="tw-bg-white tw-shadow tw-rounded-3xl tw-shadow-fadedGray-300 tw-text-fadedBlack-500 search-area">
+    <Flex className="tw-bg-white tw-shadow tw-rounded-3xl tw-shadow-fadedGray-300 tw-text-fadedBlack-500 tw-w-full">
       <div className="tw-inline-flex tw-bg-transparent tw-my-auto">
         <RiSearchLine className="tw-w-6 tw-h-6 tw-fill-fadedGray-200 tw-px-4" />
       </div>

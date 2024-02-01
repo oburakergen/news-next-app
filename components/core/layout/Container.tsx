@@ -2,11 +2,11 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const container = cva([], {
+const container = cva(["mx-auto"], {
   variants: {
     intent: {
       none: ["container"],
-      fluid: ["container-fluid"],
+      fluid: ["tw-container-fluid"],
     },
   },
   compoundVariants: [{ intent: "fluid", class: "fluid" }],

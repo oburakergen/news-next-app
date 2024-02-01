@@ -5,32 +5,40 @@ import Search from "@/components/header/topbar/Search";
 import RightBar from "@/components/header/topbar/RightBar";
 import Navigator from "@/components/header/navigation/Navigator";
 import { useWindowDimensions } from "@/hooks/useWindowDimensions";
+import { useEffect, useState } from "react";
+import FollowButton from "@/components/header/navigation/FollowButton";
+import CustomizeButton from "@/components/header/navigation/CustomizeButton";
 
 const Header = () => {
+  const [domLoaded, setDomLoaded] = useState(false);
   const { width } = useWindowDimensions();
 
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
   return (
-    <header>
-      <Container className="fluid">
-        <Flex className="tw-py-4 tw-gap-4" justify="center">
-          <Flex direction="col" justify="center" order="first" className="tw-w-full">
+    <header className="tw-px-4 xs:tw-px-0 sm:tw-px-0 lg:tw-px-8 xl:tw-px-8 tw-overflow-hidden">
+      <Container intent="fluid">
+        <Flex className="tw-py-4 tw-gap-4 xs:tw-gap-2 tw-bg-gray-100" justify="between">
+          <Flex direction="col" justify="center" order="first" className="tw-w-full tw-max-w-max">
             <Logo />
           </Flex>
-          {width > 768 && (
-            <Flex direction="col" justify="center" order="small2" className="tw-w-full">
+          {domLoaded && width > 768 && (
+            <Flex direction="col" justify="center" order="small2" className="tw-w-full tw-max-w-[50rem]">
               <Search />
             </Flex>
           )}
-          <Flex direction="row" justify="end" order="small1" className="tw-w-full">
+          <Flex direction="row" justify="end" order="small1" className="tw-w-full tw-max-w-max">
             <RightBar />
           </Flex>
         </Flex>
-      </Container>
-      <Flex>
-        <Flex justify="center" direction="row" className="tw-items-center tw-py-3">
+        <Flex justify="between" direction="row" className="tw-items-center tw-py-3 tw-px-8 tw-gap-4">
+          <FollowButton />
           <Navigator />
+          <CustomizeButton />
         </Flex>
-      </Flex>
+      </Container>
     </header>
   );
 };

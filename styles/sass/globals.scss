@@ -5,7 +5,7 @@
 
 html,
 body {
-  @apply tw-antialiased tw-leading-normal tw-font-sans;
+  @apply tw-antialiased tw-leading-normal tw-font-sans tw-bg-gray-100;
 }
 
 html,
@@ -33,18 +33,15 @@ a {
 }
 
 #__next {
-  @apply tw-flex tw-flex-col tw-min-h-screen tw-overflow-x-hidden;
-}
+  @apply tw-relative tw-min-h-screen tw-overflow-x-hidden tw-w-full tw-mx-auto tw-bg-gray-100;
 
-.container {
-  @apply tw-relative tw-w-full tw-mx-auto;
   padding-right: calc($gutter-x * 0.5);
   padding-left: calc($gutter-x * 0.5);
 
   @screen xs {
     max-width: 480px;
-    padding-right: calc($gutter-x * 1);
-    padding-left: calc($gutter-x * 1);
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @screen sm {
@@ -72,28 +69,8 @@ a {
   }
 }
 
-.search-area {
-  width: 800px;
+.container {
 
-  @screen xs {
-    display: none !important;
-    width: 0;
-  }
 
-  @screen sm {
-    display: none !important;
-    width: 0;
-  }
 
-  @screen md {
-    width: 276px;
-  }
-
-  @screen lg {
-    width: 378px;
-  }
-
-  @screen xl {
-    width: 600px;
-  }
 }

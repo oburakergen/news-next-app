@@ -1,5 +1,6 @@
-"use client";
 import Link from "next/link";
+import { open_sans } from "@/styles/fonts/fonts";
+
 const data = [
   {
     title: "News",
@@ -50,12 +51,14 @@ const data = [
 
 const Navigator = () => {
   const listItems = data.map((item) => (
-    <Link href={item.link} key={item.id}>
+    <Link href={{
+      pathname: item.link,
+    }} key={item.id}>
       {item.title}
     </Link>
   ));
 
-  return <div className="tw-flex tw-flex-wrap tw-relative tw-gap-3">{listItems}</div>;
+  return <div className="tw-flex tw-flex-wrap tw-relative tw-gap-3 tw-overflow-x-auto">{listItems}</div>;
 };
 
 export default Navigator;

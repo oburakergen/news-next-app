@@ -36,11 +36,11 @@ const button = cva(
         info: ["tw-bg-blue-500", "tw-text-white", "tw-border-transparent", "hover:rw-bg-blue-600"],
         infoOutline: ["tw-bg-white", "tw-text-blue-500", "tw-border-blue-500", "hover:tw-bg-blue-50"],
         light: [
-          "tw-bg-transparent",
+          "tw-bg-white",
           "tw-text-fadedGray-200",
-          "tw-border-transparent",
+          "tw-border-white",
           "hover:tw-text-fadedWhite-100",
-          "hover:tw-bg-fadedGray-200",
+          "hover:tw-bg-gray-400",
           "tw-shadow-fadedWhite-200",
           "tw-shadow",
         ],
@@ -54,6 +54,7 @@ const button = cva(
         full: ["tw-ring-sky-700", "tw-ring-offset-sky-700", "tw-ring-offset-2", "tw-ring-2"],
       },
       size: {
+        default: ["xs:tw-text-sm", "xs:tw-py-1", "xs:tw-px-2", "tw-text-base", "tw-py-2", "tw-px-4"],
         small: ["tw-text-sm", "tw-py-1", "tw-px-2"],
         medium: ["tw-text-base", "tw-py-2", "tw-px-4"],
         large: ["tw-text-lg", "tw-py-3", "tw-px-6"],

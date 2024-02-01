@@ -2,7 +2,6 @@ import "../styles/sass/globals.scss";
 import type { Metadata } from "next";
 import React from "react";
 import { roboto } from "@/styles/fonts/fonts";
-import { Container } from "@/components/core";
 import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
@@ -14,10 +13,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="tr-TR">
       <body id="__next" className={`${roboto.className}`}>
-        <Container intent="fluid">
-          <Header />
-          {children}
-        </Container>
+      <Header />
+      {children}
       </body>
     </html>
   );
